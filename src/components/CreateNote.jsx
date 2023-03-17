@@ -21,14 +21,13 @@ export default function CreateNote(props) {
         })
     }
 
-    // const addEvent = ()=>{
-    //  props?.addNote(note)
-    // }
-
-
-    function addEvent() {
-            props.passNote(note)
-            console.log("clicked button")   
+    function addEvent(e) {
+            e.preventDefault()
+            props.passNote(note) 
+            setNote({
+                title: "",
+                content: "",
+            })
     }
 
 
